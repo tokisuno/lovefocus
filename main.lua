@@ -1,56 +1,27 @@
+local GameStateManager = require('GameStateManager')
+local StudyTime = require('states.studyTime')
+local help = require('helpers')
 
--- minutes to seconds
-local study_seconds = 50 * 60
-local break_seconds = 10 * 60
+font = help.font
+love.graphics.setFont(font)
 
-local state = 'menu'
-local menus = {
-  'menu',
-  'study',
-  'break'
-}
+help.sfx.bonk:setVolume(0.5)
+help.sfx.menu:setVolume(0.5)
+help.sfx.ping:setVolume(0.5)
 
-local window_width
-local window_height
-
-local help = require('funcs.helpers')
-
-local formatted_time = ''
-
-love.load = function ()
-  local font = love.graphics.newFont("assets/PixAntiqua.ttf", 24)
-  love.graphics.setFont(font)
-
-  window_width, window_height = love.graphics.getDimensions()
+function love.load()
+  love.window.setMode(640, 480)
+  GameStateManager:setState(StudyTime)
 end
 
-
-love.draw = function ()
-  if state == 'menu' then
-    draw_menu()
-  end
-  -- love.graphics.print("hello there", 300, 300)
-  love.graphics.print(formatted_time, 100, 100)
-  love.graphics.print(window_width .. "x" .. window_height, 100, 300)
+function love.update(dt)
+  GameStateManager:update(dt)
 end
 
-love.update = function (dt)
-  study_seconds = study_seconds - dt
-  formatted_time = help.seconds_to_time(study_seconds)
+function love.draw()
+  GameStateManager:draw()
 end
 
-local draw_menu = function ()
-
-end
-
-local draw_study = function ()
-
-end
-
-local draw_break = function ()
-
-end
-
-local draw_completion = function ()
-
+function love.keypressed(key, scancode, isrepeat)
+  GameStateManager:keypressed(key, scancode, isrepeat)
 end
