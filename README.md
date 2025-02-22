@@ -7,11 +7,20 @@ I was bored and wanted to learn how to use love2d. That's it. I also haven't tou
 - Break timer
 - Fun sound effects
 
-## Keymaps
+# Checklist
+- [ ] Sound effects
+- [ ] Render image of "never give up" guy
+- [ ] Keymap to increment sessions (C-n/C-p)
+- [ ] Accept change state (C-y)
+- [ ] Config file (???)
+
 - Start today's sessions
 - Next session
 - Go back a session in case of mistake
 
-## Usage
-idfk yet LMAO
-
+# States
+1. Time to study!
+2. Study session
+3. Time for break!
+4. Break time
+... Repeat until done
