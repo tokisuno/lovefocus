@@ -1,5 +1,10 @@
 local M = {}
-M.font = love.graphics.newFont("assets/PixAntiqua.ttf", 24)
+M.font = love.graphics.newFont("assets/PixAntiqua.ttf", 36)
+M.font_big = love.graphics.newFont("assets/PixAntiqua.ttf", 48)
+
+M.txt = function (txt)
+  return love.graphics.newText(M.font, txt)
+end
 
 M.seconds_to_time = function(seconds)
   local seconds = tonumber(seconds)
@@ -19,12 +24,25 @@ M.sfx = {
   ping = love.audio.newSource('assets/ping.ogg', 'static'),
 }
 
+M.states = {
+  study_wait = require('states.studyWait'),
+  study_time = require('states.studyTime'),
+  break_wait = require('states.breakWait'),
+  break_time = require('states.breakTime'),
+}
+
 M.phrases = {
   study_time = {
     default = love.graphics.newText(M.font, "Study time!")
   },
+  study_wait = {
+    default = love.graphics.newText(M.font, "Ready to go?")
+  },
   break_time = {
-    default = "Break time!"
+    default = love.graphics.newText(M.font, "Break time!")
+  },
+  break_wait = {
+    default = love.graphics.newText(M.font, "Breaks are important...")
   }
 }
 

@@ -1,17 +1,17 @@
-local GameStateManager = require('GameStateManager')
-local StudyTime = require('states.studyTime')
-local help = require('helpers')
+H = require('helpers')
+GameStateManager = require('GameStateManager')
+Font = H.font
 
-font = help.font
-love.graphics.setFont(font)
+love.graphics.setFont(Font)
 
-help.sfx.bonk:setVolume(0.5)
-help.sfx.menu:setVolume(0.5)
-help.sfx.ping:setVolume(0.5)
+H.sfx.bonk:setVolume(0.5)
+H.sfx.menu:setVolume(0.5)
+H.sfx.ping:setVolume(0.5)
 
 function love.load()
   love.window.setMode(640, 480)
-  GameStateManager:setState(StudyTime)
+	-- love.graphics.setDefaultFilter('nearest', 'nearest')
+  GameStateManager:setState(H.states.study_wait)
 end
 
 function love.update(dt)

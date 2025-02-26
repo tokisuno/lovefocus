@@ -8,19 +8,26 @@ I was bored and wanted to learn how to use love2d. That's it. I also haven't tou
 - Fun sound effects
 
 # Checklist
-- [ ] Sound effects
+- [x] Sound effects
+- [x] Accept change state (C-y)
 - [ ] Render image of "never give up" guy
+- [ ] Have a sprite for studying and a sprite for break time
+- [ ] Go back a session in case of mistake
 - [ ] Keymap to increment sessions (C-n/C-p)
-- [ ] Accept change state (C-y)
-- [ ] Config file (???)
 
-- Start today's sessions
-- Next session
-- Go back a session in case of mistake
+## Maybe?
+- [ ] Config file (???)
+- [ ] Start today's sessions
 
 # States
 1. Time to study!
 2. Study session
 3. Time for break!
 4. Break time
+
 ... Repeat until done
+
+# Credits to
+- [GameStateManager](https://github.com/GwyrddGlas/GameStateManager)
+- [Spritesheet](https://opengameart.org/content/bushly-and-princess-sera)
+- [SFX](https://rpg.hamsterrepublic.com/ohrrpgce/Free_Sound_Effects)
