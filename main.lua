@@ -1,8 +1,7 @@
 H = require('helpers')
-GameStateManager = require('GameStateManager')
-Font = H.font
+GameStateManager = require('lib.GameStateManager')
 
-love.graphics.setFont(Font)
+love.graphics.setFont(H.font)
 
 H.sfx.bonk:setVolume(0.5)
 H.sfx.menu:setVolume(0.5)

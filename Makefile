@@ -1,2 +1,2 @@
 main:
-	cd ../ && love love-tomates
+	love ../lovefocus

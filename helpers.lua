@@ -1,10 +1,16 @@
 local M = {}
+
+local moonshine = require('lib.moonshine')
+
 M.font = love.graphics.newFont("assets/PixAntiqua.ttf", 36)
 M.font_big = love.graphics.newFont("assets/PixAntiqua.ttf", 48)
+M.guy = love.graphics.newImage("assets/never_give_up.jpg")
 
-M.txt = function (txt)
-  return love.graphics.newText(M.font, txt)
-end
+M.bg = {}
+M.bg.image  = love.graphics.newImage('assets/background.jpg')
+M.bg.effect = moonshine(moonshine.effects.gaussianblur)
+M.bg.effect.chain(moonshine.effects.vignette)
+M.bg.effect.gaussianblur.sigma = 4
 
 M.seconds_to_time = function(seconds)
   local seconds = tonumber(seconds)
@@ -32,18 +38,10 @@ M.states = {
 }
 
 M.phrases = {
-  study_time = {
-    default = love.graphics.newText(M.font, "Study time!")
-  },
-  study_wait = {
-    default = love.graphics.newText(M.font, "Ready to go?")
-  },
-  break_time = {
-    default = love.graphics.newText(M.font, "Break time!")
-  },
-  break_wait = {
-    default = love.graphics.newText(M.font, "Breaks are important...")
-  }
+  study_time = "Study time!",
+  study_wait = "Ready to go?",
+  break_time = "Break time!",
+  break_wait = "Breaks are important..."
 }
 
 return M
