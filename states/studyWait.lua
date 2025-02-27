@@ -1,4 +1,4 @@
-local GameStateManager = require('GameStateManager')
+local GameStateManager = require('lib.GameStateManager')
 local StudyWait = {}
 
 function StudyWait:enter()
@@ -10,7 +10,7 @@ end
 
 function StudyWait:draw()
 	love.graphics.setColor(1, 1, 0)
-  love.graphics.draw(H.phrases.study_wait.default, 75, 100)
+  love.graphics.print(H.phrases.study_wait, 75, 100)
 end
 
 function StudyWait:keypressed(key, scancode, isrepeat)

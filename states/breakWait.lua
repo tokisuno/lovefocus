@@ -1,4 +1,4 @@
-local GameStateManager = require('GameStateManager')
+local GameStateManager = require('lib.GameStateManager')
 local BreakWait = {}
 
 function BreakWait:enter()
@@ -9,7 +9,7 @@ function BreakWait:update(dt)
 end
 
 function BreakWait:draw()
-  love.graphics.draw(H.phrases.break_wait.default, 75, 300)
+  love.graphics.print(H.phrases.break_wait, 75, 300)
 end
 
 function BreakWait:keypressed(key, scancode, isrepeat)

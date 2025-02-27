@@ -1,4 +1,4 @@
-local GameStateManager = require('GameStateManager')
+local GameStateManager = require('lib.GameStateManager')
 local BreakTime = {}
 
 function BreakTime:enter()
