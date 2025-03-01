@@ -8,7 +8,7 @@ H.sfx.menu:setVolume(0.5)
 H.sfx.ping:setVolume(0.5)
 
 function love.load()
-  love.window.setMode(640, 480)
+  love.window.setMode(800, 600)
 	-- love.graphics.setDefaultFilter('nearest', 'nearest')
   GameStateManager:setState(H.states.study_wait)
 end
