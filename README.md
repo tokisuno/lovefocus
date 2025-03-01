@@ -10,7 +10,6 @@ I was bored and wanted to learn how to use love2d. That's it. I also haven't tou
 # Checklist
 - [x] Sound effects
 - [x] Accept change state (C-y)
-- [ ] Render image of "never give up" guy
 - [ ] Have a sprite for studying and a sprite for break time
 - [ ] Go back a session in case of mistake
 - [ ] Keymap to increment sessions (C-n/C-p)
@@ -18,6 +17,7 @@ I was bored and wanted to learn how to use love2d. That's it. I also haven't tou
 ## Maybe?
 - [ ] Config file (???)
 - [ ] Start today's sessions
+- [ ] Render image of "never give up" guy
 
 # States
 1. Time to study!
