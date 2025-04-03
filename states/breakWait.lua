@@ -2,7 +2,6 @@ local GameStateManager = require('lib.GameStateManager')
 local BreakWait = {}
 
 function BreakWait:enter()
-  -- formatted_time = ''
 end
 
 function BreakWait:update(dt)
